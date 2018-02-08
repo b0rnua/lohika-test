@@ -1,0 +1,15 @@
+net global-settings-section { }net fdb-settings-section { }interface 1/1.1 {    current state up
+    mac-address 11:22:e9:e5:44:48
+ip-address 11.11.11.11
+    speed 100MB
+}interface 1/2 {    current-state up
+mac 11:22:e9:e5:44:50
+address "10.10.10.10"
+    speed 10 KB
+}trash-section-do-not-parse {    interface 1/3 {
+        address 12.12.12.12
+    }
+}> interface 1/3 {
+state down
+    mac address 11:22:e9:e5:44:52
+    }
